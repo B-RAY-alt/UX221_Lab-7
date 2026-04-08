@@ -1,0 +1,148 @@
+/*
+Theme Name: Odd Jobs Laurier Child
+Theme URI: https://example.com
+Description: Child theme for the Odd Jobs for Laurier Students project
+Author: Brayden Burke
+Template: twentytwentyfive
+Version: 1.0
+Text Domain: odd-jobs-laurier-child
+*/
+
+:root {
+  --oj-background: #f8f5ef;
+  --oj-surface: #ffffff;
+  --oj-text: #1f1f1f;
+  --oj-muted: #6b7280;
+  --oj-primary: #5a3e2b;
+  --oj-primary-hover: #442f21;
+  --oj-secondary: #d9c3a5;
+  --oj-border: #e7ddd0;
+  --oj-radius: 18px;
+  --oj-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --oj-heading-font: "Poppins", sans-serif;
+  --oj-body-font: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--oj-body-font);
+  background-color: var(--oj-background);
+  color: var(--oj-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--oj-heading-font);
+  color: var(--oj-text);
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: var(--oj-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--oj-primary-hover);
+}
+
+.wp-block-button__link,
+button,
+input[type="submit"] {
+  background: var(--oj-primary);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 12px 22px;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.wp-block-button__link:hover,
+button:hover,
+input[type="submit"]:hover {
+  background: var(--oj-primary-hover);
+}
+
+.odd-jobs-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.odd-jobs-card {
+  background: var(--oj-surface);
+  border: 1px solid var(--oj-border);
+  border-radius: var(--oj-radius);
+  padding: 32px;
+  box-shadow: var(--oj-shadow);
+}
+
+.odd-jobs-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.75rem;
+}
+
+.odd-jobs-card p {
+  margin-bottom: 20px;
+  color: var(--oj-muted);
+}
+
+.odd-jobs-card a {
+  display: inline-block;
+  background: var(--oj-primary);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.odd-jobs-card a:hover {
+  background: var(--oj-primary-hover);
+  color: #fff;
+}
+
+.odd-jobs-hero {
+  background: linear-gradient(135deg, #f3e8d7, #fffaf4);
+  border: 1px solid var(--oj-border);
+  border-radius: 28px;
+  padding: 56px 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.odd-jobs-hero h1 {
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.odd-jobs-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--oj-muted);
+  font-size: 1.05rem;
+}
+
+.site-footer,
+footer {
+  border-top: 1px solid var(--oj-border);
+}
+
+@media (max-width: 768px) {
+  .odd-jobs-split {
+    grid-template-columns: 1fr;
+  }
+
+  .odd-jobs-card,
+  .odd-jobs-hero {
+    padding: 24px;
+  }
+}
